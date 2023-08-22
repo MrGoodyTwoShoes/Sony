@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/main.css">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  #compliment {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+  <div>
+    <p>Tap the emoji as many times as you like </p>
+    <span id="emoji" role="img" aria-label="Choose Emoji" onclick="showRandomCompliment()"><img src="assets/get-a-kiss.png" width="14%" alt=""></span>
+    <p id="compliment"></p>
+  </div>
+  <script>
+    const compliments = [
+      "When I met you we acted young and hella pure",
+      "Your smile brightens up the room, literally! 😁",
+      "I don't understand how peeps talk ill about anything about you",
+      "Don't be too hard on yourself. You're doing great! I mean, lookatchu!",
+      "You are strong and resilient.",
+      "You are enough. Always. At least for me",
+      "When are you linking me with an employer? 🤌🏽",
+      "You have taught me a whole LOT.",
+      "I miss you every effing day.",
+      "I hope that I outdo every other despising soul.",
+      "I love you",
+      "I wanna tell you that I'm a text away if issa Monday",
+      "Oh, and I'm ready for your mediocre bullshit if issa Tuesday",
+      "Drinking buddy, when are we taking a smoke? 😮‍💨",
+      "I need you to know that I'm not doing so well either but I'm pushing so I get to see you again",
+      "Muthoni. The 'I-just-heard-your-opinion-I-coulda-did-w/o it' typa girl"
+    ];
+
+    function showRandomCompliment() {
+      const complimentElement = document.getElementById("compliment");
+      const randomIndex = Math.floor(Math.random() * compliments.length);
+      complimentElement.textContent = compliments[randomIndex];
+    }
+  </script>
+</body>
+</html>
